@@ -8,28 +8,11 @@
 
 import React from "react";
 import ReactDOM from "react-dom";
-
-const date = new Date();
-const time = date.getHours();
-const dayColors = { color: "black" };
-let partOfDay = String;
-
-if (time < 12) {
-  partOfDay = "Good morning";
-  dayColors.color = "red";
-} else if (time < 17) {
-  partOfDay = "Good afternoon";
-  dayColors.color = "green";
-} else {
-  partOfDay = "Good evening";
-  dayColors.color = "blue";
-}
+import Heading from "./heading";
 
 ReactDOM.render(
   <div>
-    <h1 className="heading" style={dayColors}>
-      {partOfDay}!
-    </h1>
+    <Heading />
   </div>,
   document.getElementById("root")
 );
